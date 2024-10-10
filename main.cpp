@@ -1,3 +1,9 @@
+// Title: Chair Class Demo
+// Description: This program demonstrates the Chair class and the changes to constructors.
+// Author: Talha Ahmed
+// Lab: Lab 20
+// Class: COMSC-210
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
