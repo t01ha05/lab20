@@ -19,8 +19,8 @@ class Chair {
             }
         }
         //parameter constructor with legs and an array of prices
-        Chair(int nunLegs, const double priceArray[3]) {
-            leg = numLegs;
+        Chair(int numLegs, const double priceArray[3]) {
+            legs = numLegs;
             for (int i=0; i<3; ++i) {
                 prices [i] = priceArray[i];
             }
@@ -46,5 +46,21 @@ class Chair {
 };
 
 int main() {
+    srand(time(0)); //seed for random num. gen.
 
+    //first, create a defualt chair object and use setters
+    Chair chair1;
+    chair1.printDetails(); //random values populated
+    
+    //second, create a Chair object using the parameter constructor
+    double pricesArray[3] = {299.99, 450.50, 999.99};
+    Chair chair2(4, pricesArray);
+    chair2.printDetails();//populated via a parameter constructor
+    
+    // Third, create an array of Chair objects using the default constructor
+    Chair chairArray[3];
+    for (int i = 0; i < 3; ++i) {
+        chairArray[i].printDetails(); // Random values populated by default constructor
+    }
+    return 0;
 }
